@@ -2,7 +2,7 @@ services:
 
   nginx:
     image: nginx:latest
-    container_name: pizza-city_nginx
+    container_name: todoapp_nginx
     ports:
       - 8080:80
     volumes:
@@ -18,7 +18,7 @@ services:
   php:
     build:
       dockerfile: ./docker/php/Dockerfile
-    container_name: pizza-city_php
+    container_name: todoapp_php
     volumes:
       - ./:/var/www/
     extra_hosts:
@@ -31,20 +31,20 @@ services:
 
   mysql:
     image: mysql:latest
-    container_name: pizza-city_mysql
+    container_name: todoapp_mysql
     volumes:
       - ./docker/volumes/mysql:/var/lib/mysql
     ports:
       - "3316:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=pizza-city
+      - MYSQL_DATABASE=todoapp
       - REDIS_HOST=cache
       - REDIS_PORT=6379
 
   phpmyadmin:
     image: phpmyadmin
-    container_name: pizza-city_phpmyadmin
+    container_name: todoapp_phpmyadmin
     ports:
       - 9090:80
     environment:
@@ -55,7 +55,7 @@ services:
 
   node:
     image: node:latest
-    container_name: pizza-city_node
+    container_name: todoapp_node
     ports:
         - "3000:3000"
     volumes:
