@@ -44,4 +44,4 @@ docker exec -it todoapp_php bash
 php artisan test
 ```
 
-(![Image Alt]https://github.com/olegeliseev/todoapp/blob/f1f99a99226d463677c62b43c742ee9f118253db/screenshot.png)
+![Image Alt](https://github.com/olegeliseev/todoapp/blob/f1f99a99226d463677c62b43c742ee9f118253db/screenshot.png)
