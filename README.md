@@ -5,8 +5,8 @@
 
 Перейдите в папку, в которой хотите поместить проект, и клонируйте репозиторий:
 
-```sh
-$ git clone https://github.com/olegeliseev/todoapp.git
+```
+git clone https://github.com/olegeliseev/todoapp.git
 ```
 
 Перейдите в корневую папку проекта и выполните команду:

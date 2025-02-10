@@ -81,7 +81,7 @@ export default {
                 await axios.patch(`/api/tasks/${task.id}`, { completed: newStatus });
             } catch (error) {
                 console.error(`Ошибка при обновлении задачи с ID ${task.id}:`, error);
-                event.target.checked = !event.target.checked; // Отменить изменения, если запрос не удался
+                event.target.checked = !event.target.checked;
             }
         },
 
