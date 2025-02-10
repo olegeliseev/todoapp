@@ -2,19 +2,19 @@
     <div>
         <ul>
             <li
-                class="border-b border-gray-200 flex items-center justify-between py-4"
+                class="border-b border-gray-200 flex items-center justify-between py-4 h-12"
                 :class="{ 'completed': task.completed }"
                 v-for="task in tasks.data" :key="task.id">
-                <label class="flex items-center">
+                <div class="flex items-center flex-1">
                     <input class="mr-2" type="checkbox" :checked="task.completed" @change="updateTask(task, $event)">
-                    <span v-if="!task.isEditing">{{ task.title }}</span>
+                    <span v-if="!task.isEditing" class="flex-1">{{ task.title }}</span>
                     <input
                         v-else
                         v-model="task.title"
                         @keyup.enter="saveTask(task)"
                         @blur="saveTask(task)"
-                        :class="{ 'focus:outline-none focus:border-blue-500': task.isEditing }" />
-                </label>
+                        class="w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 border rounded" />
+                </div>
                 <div>
                     <button class="text-blue-500 hover:text-blue-700 mr-4" v-if="!task.isEditing" @click="editTask(task)">Редактировать</button>
                     <button class="text-red-500 hover:text-red-700" v-if="!task.isEditing" @click="deleteTask(task.id)">Удалить</button>
