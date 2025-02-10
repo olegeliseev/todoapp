@@ -1,5 +1,5 @@
 # Todo App
-Простой список дел на Laravel и Vue.js
+Простой список задач на Laravel и Vue.js
 
 ## Установка через Docker
 
