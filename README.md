@@ -22,7 +22,7 @@ docker exec -it todoapp_php bash
 composer install
 ```
 
-После чего запустите миграции и сидеры:
+После чего запустите миграции:
 ```
 php artisan migrate
 ```
