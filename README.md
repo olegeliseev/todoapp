@@ -27,9 +27,11 @@ composer install
 php artisan migrate
 ```
 
-Перейдите в контейнер node.js и выполните команду для сборки фронтенда:
+Перейдите в контейнер node.js и выполните команды для сборки фронтенда:
 ```
 docker exec -it todoapp_node bash
+
+npm install
 
 npm run dev
 ```
